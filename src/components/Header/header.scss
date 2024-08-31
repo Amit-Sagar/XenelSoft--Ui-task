@@ -1,0 +1,92 @@
+// Import mixins
+@import '../../helpers/styles/mixins.scss';
+
+.header {
+  // Default styles for the header
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+
+  .header-logo {
+    width: 200px; // Set the width directly
+    margin-top: 10px;
+
+    @include Responsive("tab") {
+      width: 150px; // Adjust width for mobile
+      margin-top: 5px;
+
+    }
+  }
+  .header-logo-border {
+    width: 230px; 
+
+    @include Responsive("tab") {
+      width: 170px; 
+    }
+  }
+.button-container{
+  display: flex;
+  gap: 20px;
+
+  @include Responsive("tab") {
+    gap: 10px; 
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+
+    @include Responsive("tab") {
+      gap: 4px;
+    }
+
+    .button {
+      width: 40px; // Set width directly
+      height: 40px; // Set height directly
+
+      @include Responsive("tab") {
+        padding: 0px;
+        width: 20px; // Adjust width for mobile
+        height: 20px; // Adjust height for mobile
+      }
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      @include Responsive("tab") {
+        width: 10px; // Adjust width for mobile
+        height: 10px; // Adjust height for mobile
+      }
+    }
+  }
+}
+  .header-icons {
+    display: flex;
+    gap: 15px;
+
+    @include Responsive("tab") {
+      gap: 5px;
+    }
+
+    img {
+      width: 30px; // Set width directly
+      height: 30px; // Set height directly
+
+      @include Responsive("tab") {
+        width: 20px; // Adjust width for mobile
+        height: 20px; // Adjust height for mobile
+      }
+    }
+  }
+
+  .header-title {
+    font-size: 18px;
+    color: black;
+    padding: 4px 8px;
+
+    @include Responsive("tab") {
+      font-size: 14px;
+    }
+  }
+}

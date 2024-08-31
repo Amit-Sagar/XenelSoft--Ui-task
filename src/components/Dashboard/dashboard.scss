@@ -1,0 +1,52 @@
+@import "../../helpers/styles/mixins.scss";
+
+.dashboard {
+    padding: 20px;
+    background-color: #081C3A;
+    color: #fff;
+    @include Responsive("tab") {
+      padding:  10px;
+
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  
+      button {
+        background-color: #1A325D;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #67D9F3;
+        }
+      }
+    }
+  
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+  
+
+  .tab-section {
+    display: flex;
+    flex-direction: row;
+    @include Responsive("largescreen") {
+      flex-direction: column;
+
+    }
+  }
+  .chart-section {
+    display: flex;
+    @include Responsive("tab") {
+      flex-direction: column;
+
+    }
+  }

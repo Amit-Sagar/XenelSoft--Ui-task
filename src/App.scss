@@ -1,0 +1,248 @@
+@import "./helpers/styles/mixins.scss";
+@import "./helpers/styles/constants.scss";
+
+@include Spacings;
+@include Sizing;
+@include Opacity;
+@include HWs;
+
+body{
+  background-color: #0A1B3C;
+  color: white;
+}
+
+.app{
+  width: 100vw;
+  overflow: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-reverse {
+  display: flex;
+  flex-direction: row-reverse !important;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch !important;
+}
+
+.items-right {
+  align-items: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.justify-start {
+  justify-content: start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-colOnMob {
+  display: flex;
+
+  @include Responsive("mobile") {
+    flex-direction: column;
+  }
+}
+
+.fs-14--noMob {
+  font-size: 14px !important;
+
+  @include Responsive("mobile") {
+    font-size: 12px !important;
+    letter-spacing: -0.6px;
+  }
+}
+
+.hover-scale {
+  cursor: pointer;
+}
+
+.hover-scale:hover {
+  transform: scale(1.04);
+}
+
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.object-cover {
+  object-fit: cover !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflowY-hidden {
+  overflow-y: hidden !important;
+}
+
+.overflowY-auto {
+  overflow-y: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0{
+  left: 0;
+}
+
+.right-0{
+  right: 0;
+}
+
+.border-white{
+  border: 1px solid white;
+}
+
+.border-blue{
+  border: 1px solid #133b69;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gap-8{
+  gap: 8px
+}
+
+.bg-blue-gradient{
+  background: $light_blue_gradient !important;
+}
+
+.bg-red{
+  background-color: #FF8A8A;
+}
+
+.bg-primary{
+ background-color: #3E8EEA !important;
+}
+
+.bg-black{
+ background-color: #000000;
+}
+
+.bg-success{
+  background-color: #8AFFB8;
+}
+
+.rounded-full{
+  border-radius: 100% !important;
+}
+
+.p-0{
+padding:  0px !important;
+}
+
+.fw-600{
+  font-weight: 600;
+}
+
+.c-white{
+  color: #ffffff;
+}
+
+.c-success{
+  color: #006B2A;
+}
+
+.c-danger{
+  color:#6B0000;
+}
+
+.blue-shadow{
+  box-shadow: 0px 0px 11.15px 0px #3881D5;
+}
+
+.z-full{
+  z-index: 9999;
+}
+
+.mx-auto{
+  margin: 0 auto;
+}

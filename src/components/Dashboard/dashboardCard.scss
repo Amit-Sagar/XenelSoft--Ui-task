@@ -1,0 +1,33 @@
+@import "../../helpers/styles/mixins.scss";
+
+.dashboard-card {
+    background-color: #112C54;
+    border-radius: 10px;
+    color: #fff;
+    width: 300px;
+    @include Responsive("tab") {
+      width: 250px;
+  } 
+    .button{
+      height: 60px;
+      width: 60px;
+      img {
+        @include Responsive("tab") {
+          width: 20px;
+          height: 20px;
+      } 
+      }
+      @include Responsive("tab") {
+        width: 40px;
+        height: 40px;
+    } 
+    }
+
+    .content{
+      font-size: 18px;
+      @include Responsive("tab") {
+        font-size: 14px;
+    } 
+    }
+  }
+  
